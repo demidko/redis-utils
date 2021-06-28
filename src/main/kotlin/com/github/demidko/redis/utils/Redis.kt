@@ -3,7 +3,6 @@ package com.github.demidko.redis.utils
 import co.touchlab.stately.isolate.IsolateState
 import org.redisson.api.RedissonClient
 import org.redisson.config.Config
-import java.util.Map
 
 /**
  * Configure redis client
@@ -41,4 +40,4 @@ fun <K, V> RedissonClient.mutableMap(name: String) = IsolateState { getMap<K, V>
  * @param name - name of object
  * @return isolated map object
  */
-fun <K, V> RedissonClient.hashMap(name: String) = IsolateState { getMap<K, V>(name) as Map<K, V> }
+fun <K, V> RedissonClient.redisMap(name: String) = IsolateState { getMap<K, V>(name) }
