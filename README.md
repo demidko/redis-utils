@@ -28,7 +28,7 @@ Add the dependency:
 
 ```kotlin
 dependencies {
-    implementation("com.github.demidko:redis-utils:2021.06.29")
+    implementation("com.github.demidko:redis-utils:2021.06.30")
 }
 ```
 
