@@ -8,9 +8,8 @@ plugins {
   kotlin("jvm") version "1.5.20"
 }
 dependencies {
-  // This dependency is exported to consumers, that is to say found on their compile classpath.
-  api("org.apache.commons:commons-math3:3.6.1")
-
+  api("org.redisson:redisson:3.15.6")
+  api("co.touchlab:stately-isolate-jvm:1.1.7-a1")
   testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
   testImplementation("com.natpryce:hamkrest:1.8.0.1")
   testImplementation("io.mockk:mockk:1.11.0")
