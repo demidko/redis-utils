@@ -9,7 +9,7 @@ import org.redisson.config.Config
  * @param url connection string with login and password
  * @return config object
  */
-fun clientOf(url: String) = Config().apply {
+public fun clientOf(url: String) = Config().apply {
   useSingleServer().apply {
     address = url
     val authorizationIdx = 9
@@ -30,5 +30,4 @@ fun clientOf(url: String) = Config().apply {
  * @param name - name of object
  * @return isolated map object
  */
-fun <K, V> RedissonClient.threadSafeMap(name: String) =
-  IsolateState { getMap<K, V>(name) as MutableMap<K, V> }
+public fun <K, V> RedissonClient.threadSafeMap(name: String) = IsolateState { getMap<K, V>(name) as MutableMap<K, V> }
