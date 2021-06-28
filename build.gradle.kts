@@ -27,7 +27,7 @@ tasks.test {
 }
 publishing {
   publications {
-    create<MavenPublication>("library") {
+    create<MavenPublication>("redis-utils") {
       groupId = "com.github.demidko"
       from(components["java"])
     }
